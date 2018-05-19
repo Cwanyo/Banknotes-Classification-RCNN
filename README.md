@@ -112,7 +112,7 @@ item {
 - DOWNLOAD : https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
 - PUT THE FINE TUNE MODEL IN THE models/research/object_detection
 
-### 10. EDIT CONFIG FILE
+### 10. EDIT CONFIG FILE FROM (9.1)
 - num_classes = NUM OF CLASSES
 - REPLACE all "PATH_TO_BE_CONFIGURED"
 - eval_config>num_examples = NUMBER OF TEST IMAGES
