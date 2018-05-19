@@ -1,7 +1,9 @@
 # INSTALLING 
+
 ### 1. REQUIRED DEPENDENCIES
 - python 3 
 - tensorflow cpu or gpu >= 1.5.0
+
 ### 2. INSTALL DEPENDENCIES USING PIP3:
 ````
 pip3 install tensorflow-gpu
@@ -11,11 +13,13 @@ pip3 install lxml
 pip3 install jupyter
 pip3 install matplotlib
 ````
+
 ### 3. INSTALL PROTOC
 - DOWNLOAD : https://github.com/google/protobuf/releases/tag/v3.4.0
 - SET ENVIRONMENT VARIABLE
 
-# SETTING UP THE OBJECT DETECTION
+# SETTING UP
+
 ### 1. SET PATH
 - REPLACE "YOUR_SYSTEM_PATH"
 ````
@@ -23,6 +27,7 @@ set PYTHONPATH=YOUR_SYSTEM_PATH/models;YOUR_SYSTEM_PATH/models/research;YOUR_SYS
 
 set PATH=%PATH%%PYTHONPATH%
 ````
+
 ### 2. PROTOC - GO TO models/research
 ````
 protoc ./object_detection/protos/*.proto --python_out=.
@@ -39,12 +44,19 @@ py -3 setup.py install
 jupyter notebook object_detection_tutorial.ipynb
 ````
 
-### 5. COLLECT IMAGES
-- LABEL THE IMAGES ref: https://github.com/tzutalin/labelImg
+# PREPARING TO TRAIN
+
+### 1. COLLECT IMAGES
+- LABEL THE IMAGES USING : https://github.com/tzutalin/labelImg
 - PUT IMAGES AT models/research/object_detection/images
 - DIVIDE THE IMAGES INTO train AND test
+````
+./images
+--/test
+--/train
+````
 
-### 6. GENERATE CSV - GO TO models/research/object_detection
+### 2. GENERATE CSV - GO TO models/research/object_detection
 ````
 py -3 xml_to_csv.py
 ````
@@ -91,9 +103,11 @@ item {
 - PUT label_map.pbtxt IN THE models/research/object_detection/training
 
 ### 9. CONFIGURE TRAINING
+
 #### 9.1 CONFIGURE MODEL
 - COPY THE CONFIG FILE models/research/object_detection/samples/configs/XXXX.config
 - PUT THE CONFIG IN THE models/research/object_detection/training
+
 #### 9.2 FINE TURN MODEL
 - DOWNLOAD : https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
 - PUT THE FINE TUNE MODEL IN THE models/research/object_detection
