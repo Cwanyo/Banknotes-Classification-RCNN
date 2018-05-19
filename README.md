@@ -108,9 +108,9 @@ item {
 - COPY THE CONFIG FILE models/research/object_detection/samples/configs/XXXX.config
 - PUT THE CONFIG IN THE models/research/object_detection/training
 
-#### 9.2 FINE TURN MODEL
+#### 9.2 FINE TUNE MODEL
 - DOWNLOAD : https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
-- PUT THE FINE TUNE MODEL IN THE models/research/object_detection
+- EXTRACT AND PUT THE FINE TUNE MODEL IN THE models/research/object_detection
 
 ### 10. EDIT CONFIG FILE FROM (9.1)
 - num_classes = NUM OF CLASSES
