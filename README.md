@@ -25,7 +25,7 @@ pip3 install matplotlib
 ````
 set PYTHONPATH=YOUR_SYSTEM_PATH/models;YOUR_SYSTEM_PATH/models/research;YOUR_SYSTEM_PATH/models/research/slim
 
-set PATH=%PATH%%PYTHONPATH%
+set PATH=%PATH%;%PYTHONPATH%
 ````
 
 ### 2. PROTOC - GO TO models/research
