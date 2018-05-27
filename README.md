@@ -128,12 +128,14 @@ py -3 train.py --logtostderr --train_dir=training/ --pipeline_config_path=traini
 ### 12. EVALUATION
 - REPLACE XXXX
 ````
-py -3 eval.py --logtostderr --train_dir=training/ --pipeline_config_path=training/XXXX.config --checkpoint_dir=training/ --eval_dir=training/
+py -3 eval.py --logtostderr --train_dir=training/ --pipeline_config_path=training/XXXX.config --checkpoint_dir=training/ --eval_dir=eval/
 ````
 
 ### TENSORBOARD
 ````
 tensorboard --logdir=training
+
+tensorboard --logdir=eval
 ````
 
 ### 13. EXPORT INFERENCE GRAPH 
